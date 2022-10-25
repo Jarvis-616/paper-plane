@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>纸飞机来喽~</title>
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="../ico/favicon.ico">
+    <link rel="stylesheet" href="../plane/index.css">
+    <style>
+        img {
+            width: 50px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="plane">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    </div>
+    <script src="../plane/index.js"></script>
+
+    <!-- 设置鼠标跟随图片 -->
+    <img src="../picture-mouse/7.png">
+    <script>
+        var img = document.querySelector('img');
+        document.addEventListener('mousemove', function(e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            img.style.top = y + 'px';
+            img.style.left = x + 'px';
+            // img.style.left = x - 50 + 'px';
+        })
+    </script>
+
+</body>
+
+</html>
